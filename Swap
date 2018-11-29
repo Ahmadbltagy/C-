@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Swapping
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 10, y = 5;
+            Console.WriteLine("=========Before Swap=========");
+            Console.WriteLine("X = {0}  Y = {1}", x, y);
+            x = x + y;
+            y = x - y;
+            x = x - y;
+            Console.WriteLine("=========After Swap=========");
+            Console.WriteLine("X = {0}  Y = {1}",x,y);
+        }
+    }
+}
