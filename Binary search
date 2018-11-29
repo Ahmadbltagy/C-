@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Binary_search
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] sample = { 1, 2, 3, 10, 20 }; //hint the array should be sorted
+            int target = 10;
+            int index = BS(sample, target, 0, sample.Length - 1);
+            Console.WriteLine("Value index = "+index);
+            Console.ReadKey();
+        }
+        public static int BS (int[] a, int target, int start, int end)
+        {
+            if (start > end)
+            {
+                return -1;
+            }
+            else
+            {
+                int middle = (start + end) / 2;
+                if (target == a[middle])
+                {
+                    return middle;
+                }
+                else if (target > a[middle])
+                {
+                    return middle + 1;
+                }
+                else
+                {
+                    return middle - 1;
+                }
+             
+            }
+        }
+    }
+}
