@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Linear_search
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] sample = { 10, 4, 5, 8, 6, 1 };
+            int target = 5;
+            int index = LS(sample, target);
+            Console.WriteLine("Value index = "+index);
+            Console.ReadKey();
+
+        }
+        public static int LS(int[] a, int target)
+        {
+            for (int i = 0; i < a.Length - 1; i++)
+            {
+                if (target == a[i])
+                {
+                    return i;
+                }
+            }
+            return -1;
+
+        }
+    }
+}
