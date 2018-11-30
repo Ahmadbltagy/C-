@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Mini_value_and_Max
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = { 1, 2, 3, 4, 5 };
+            int Minimum = arr[0];
+            int Maximum = arr[0];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] < arr[Minimum])
+                {
+                    Minimum = arr[i];
+                }
+                else
+                {
+                    Maximum = arr[i];
+                }
+            }
+            Console.WriteLine("Minimum Value = " + Minimum + " Maximum Value = " + Maximum);
+        }
+    }
+}
