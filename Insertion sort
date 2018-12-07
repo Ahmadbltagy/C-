@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] sample = { 10, 4, 3, 5, 2, 1 };
+            IS(sample);
+            Console.WriteLine("After Sorting ...");
+            for (int i = 0; i < sample.Length; i++)
+            {
+                Console.Write(sample[i] + " ");
+            }
+
+            Console.ReadKey();
+        }
+        public static void IS(int[] a)
+        {
+            int current; // current element to be sorted
+            int unsorted; 
+            int sorted;
+
+            for (unsorted = 1; unsorted < a.Length; unsorted++)
+            {
+                // Set current number to unsorted number
+                current = a[unsorted];
+                sorted = unsorted - 1;
+                while (sorted >= 0 && a[sorted] > current)
+                {
+                    // current is less than the number in the sorted part
+                    a[sorted + 1] = a[sorted];
+                    sorted--;
+                }
+                // current is larger than the number in the unsorted part, or we reach the end of the sorted part
+                a[sorted + 1] = current;
+            }
+
+        }
+       
+    }
+}
